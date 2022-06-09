@@ -1,0 +1,63 @@
+// Copyright 2021 Matei Hriscu (311CA) <matei.hriscu@stud.acs.upb.ro>
+
+Throughout all tasks I have used a struct to hold the content, dimensions and
+sum of each matrix.
+
+All matrices are stored in the mat_arr array which is dynamically allocated and
+gets resized every time the maximum capacity is reached or less than half of
+the maximum capacity is being used.
+
+Also, all operations which target a specific matrix are only performed if the
+given index is valid.
+
+Task 1 (Loading a matrix into memory):
+
+Memory is allocated for the new matrix and its dimensions and content are read
+from standard input. Then it is added to the end of mat_arr.
+
+Task 2 (Determining the dimensions of a given matrix):
+
+The dimensions are simply printed from the struct's rows and columns members.
+
+Task 3 (Displaying a matrix):
+
+The elements of the matrix are printed to the standard output.
+
+Task 4 (Resizing a matrix):
+
+A copy is made of the original matrix, which is then used to build the resized
+matrix. Each element of the new matrix is taken from the copy at the
+intersection of each new line / column.
+
+Task 5 (Matrix multiplication):
+
+If the multiplication isn't possible, an error message will be shown. Otherwise,
+the 2 matrices will be multiplied using the standard algorithm and the product
+will be added to the end of mat_arr.
+
+Task 6 (Sorting matrices):
+
+mat_arr is sorted using the merge sort algorithm in increasing order of the
+sum of all elements of each matrix.
+
+Task 7 (Transposing a matrix):
+
+A copy of the original matrix is made, which is then used to change m into its
+transpose.
+
+Task 8 (Eliminating a matrix):
+
+All memory used by the given matrix is freed, and all following matrices are
+shifted one position to the left.
+
+Task 9 (Freeing all resources):
+
+All matrices that are still in mat_arr are freed.
+
+Task 10 (Strassen's algorithm):
+
+The matrices which have to be multiplied are split into the 4 submatrices
+required for the implementation of Strassen's algorithm. Then the sums and
+differences required by the recursive calls are calculated. The 7 specific
+matrices are then calculated recursively and the result is built according
+to Strassen's formulas.
